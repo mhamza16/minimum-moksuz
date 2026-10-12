@@ -37,13 +37,16 @@ void uart_rx_irq_handler(void) {
     }
 }
 
+/* Called only from the SVC path, where the CPU has already masked IRQs.
+ * minemu only checks for a pending IRQ when an emulator batch stops; a user loop that
+ * spins on ioctl stops at every SVC entry (I already set), so the UART IRQ can starve.
+ * Drain the hardware FIFO here so a read never depends on the IRQ having been taken. */
 int uart_getc(void) {
     int result = -1;
-    minemu_irq_disable();
+    uart_rx_irq_handler();
     if (rx_head != rx_tail) {
         result = rx_buf[rx_tail];
         rx_tail = (rx_tail + 1) & (UART_RX_SIZE - 1);
     }
-    minemu_irq_enable();
     return result;
 }
