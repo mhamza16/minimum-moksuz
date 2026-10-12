@@ -4,6 +4,7 @@
 #include "minemu/trace.h"
 #include "msh.h"
 #include "uart.h"
+#include "user.h"
 
 void minemu_kernel_main(const struct minemu_boot_info *boot_info) {
     if ((uintptr_t)boot_info != MINEMU_BOOT_INFO_VADDR ||
@@ -17,11 +18,16 @@ void minemu_kernel_main(const struct minemu_boot_info *boot_info) {
         minemu_trace_event(UINT32_C(0xb007bad0));
         minemu_fail_stop();
     }
-    uart_puts("hello world\n");
-    minemu_trace_event(1);
-    uart_rx_init();
-    minemu_irq_enable();
-    for (;;) {
-        msh_run_line();
+    if (!user_map_system_rom(boot_info)) {
+        minemu_trace_event(UINT32_C(0xb007bad0));
+        minemu_fail_stop();
     }
+    const struct minemu_module_record *module =
+        user_find_module(boot_info, USER_MODULE_NAME, sizeof(USER_MODULE_NAME) - 1U);
+    if (module == NULL || !user_load_module(boot_info, module)) {
+        minemu_trace_event(UINT32_C(0xb007bad0));
+        minemu_fail_stop();
+    }
+    uart_rx_init();
+    minemu_enter_user(module->entry_vaddr, USER_STACK_TOP);
 }

@@ -23,6 +23,7 @@ static volatile uint32_t rx_head, rx_tail;
 void uart_rx_init(void) {
     MINEMU_UART0->control |= MINEMU_UART_CONTROL_RX_IRQ_ENABLE;
     MINEMU_INTERRUPT->enable |= UINT32_C(1) << MINEMU_IRQ_UART0;
+    uart_rx_irq_handler();
 }
 
 void uart_rx_irq_handler(void) {
