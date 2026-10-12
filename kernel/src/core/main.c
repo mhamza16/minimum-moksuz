@@ -2,7 +2,6 @@
 #include "minemu/irq.h"
 #include "minemu/trap.h"
 #include "minemu/trace.h"
-#include "msh.h"
 #include "uart.h"
 #include "user.h"
 
