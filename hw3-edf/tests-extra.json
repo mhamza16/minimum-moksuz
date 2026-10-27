@@ -1,0 +1,2260 @@
+[
+    {
+        "input": "1\n3\n3",
+        "output": {
+            "0": [
+                "processes: [1|p=3|r=0|d=3]",
+                "process 1 starts"
+            ],
+            "3": [
+                "process 1 ends",
+                "max time reached",
+                "processes:"
+            ],
+            "Number of processes created": "1",
+            "Total waiting time": "0",
+            "Average waiting time": "0.00",
+            "Number of processes completed": "1",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "1\n1\n3",
+        "output": {
+            "0": [
+                "processes: [1|p=1|r=0|d=3]",
+                "process 1 starts"
+            ],
+            "1": [
+                "process 1 ends"
+            ],
+            "3": [
+                "max time reached",
+                "processes:"
+            ],
+            "Number of processes created": "1",
+            "Total waiting time": "0",
+            "Average waiting time": "0.00",
+            "Number of processes completed": "1",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "2\n1\n2\n1\n2",
+        "output": {
+            "0": [
+                "processes: [1|p=1|r=0|d=2] [2|p=1|r=0|d=2]",
+                "process 1 starts"
+            ],
+            "1": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "2": [
+                "process 2 ends",
+                "max time reached",
+                "processes:"
+            ],
+            "Number of processes created": "2",
+            "Total waiting time": "1",
+            "Average waiting time": "0.50",
+            "Number of processes completed": "2",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "4\n1\n4\n1\n4\n1\n4\n1\n4",
+        "output": {
+            "0": [
+                "processes: [1|p=1|r=0|d=4] [2|p=1|r=0|d=4] [3|p=1|r=0|d=4] [4|p=1|r=0|d=4]",
+                "process 1 starts"
+            ],
+            "1": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "2": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "3": [
+                "process 3 ends",
+                "process 4 starts"
+            ],
+            "4": [
+                "process 4 ends",
+                "max time reached",
+                "processes:"
+            ],
+            "Number of processes created": "4",
+            "Total waiting time": "6",
+            "Average waiting time": "1.50",
+            "Number of processes completed": "4",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "2\n1\n2\n3\n10",
+        "output": {
+            "0": [
+                "processes: [1|p=1|r=0|d=2] [2|p=3|r=0|d=10]",
+                "process 1 starts"
+            ],
+            "1": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "2": [
+                "processes: [1|p=1|r=2|d=4] [2|p=2|r=0|d=10]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "3": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "4": [
+                "processes: [1|p=1|r=4|d=6] [2|p=1|r=0|d=10]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "5": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "6": [
+                "process 2 ends",
+                "processes: [1|p=1|r=6|d=8]",
+                "process 1 starts"
+            ],
+            "7": [
+                "process 1 ends"
+            ],
+            "8": [
+                "processes: [1|p=1|r=8|d=10]",
+                "process 1 starts"
+            ],
+            "9": [
+                "process 1 ends"
+            ],
+            "10": [
+                "max time reached",
+                "processes:"
+            ],
+            "Number of processes created": "6",
+            "Total waiting time": "3",
+            "Average waiting time": "0.50",
+            "Number of processes completed": "6",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "2\n2\n2\n1\n4",
+        "output": {
+            "0": [
+                "processes: [1|p=2|r=0|d=2] [2|p=1|r=0|d=4]",
+                "process 1 starts"
+            ],
+            "2": [
+                "process 1 ends",
+                "processes: [2|p=1|r=0|d=4] [1|p=2|r=2|d=4]",
+                "process 2 starts"
+            ],
+            "3": [
+                "process 2 ends",
+                "process 1 starts"
+            ],
+            "4": [
+                "max time reached",
+                "processes: [1|p=1|r=2|d=4]"
+            ],
+            "Number of processes created": "3",
+            "Total waiting time": "3",
+            "Average waiting time": "1.00",
+            "Number of processes completed": "2",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "2\n2\n2\n2\n2",
+        "output": {
+            "0": [
+                "processes: [1|p=2|r=0|d=2] [2|p=2|r=0|d=2]",
+                "process 1 starts"
+            ],
+            "2": [
+                "process 1 ends",
+                "max time reached",
+                "processes: [2|p=2|r=0|d=2]"
+            ],
+            "Number of processes created": "2",
+            "Total waiting time": "2",
+            "Average waiting time": "1.00",
+            "Number of processes completed": "1",
+            "Maximum lateness": "0"
+        }
+    },
+    {
+        "input": "3\n1\n7\n2\n11\n3\n13",
+        "output": {
+            "0": [
+                "processes: [1|p=1|r=0|d=7] [2|p=2|r=0|d=11] [3|p=3|r=0|d=13]",
+                "process 1 starts"
+            ],
+            "1": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "3": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "6": [
+                "process 3 ends"
+            ],
+            "7": [
+                "processes: [1|p=1|r=7|d=14]",
+                "process 1 starts"
+            ],
+            "8": [
+                "process 1 ends"
+            ],
+            "11": [
+                "processes: [2|p=2|r=11|d=22]",
+                "process 2 starts"
+            ],
+            "13": [
+                "process 2 ends",
+                "processes: [3|p=3|r=13|d=26]",
+                "process 3 starts"
+            ],
+            "14": [
+                "processes: [1|p=1|r=14|d=21] [3|p=2|r=13|d=26]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "15": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "17": [
+                "process 3 ends"
+            ],
+            "21": [
+                "processes: [1|p=1|r=21|d=28]",
+                "process 1 starts"
+            ],
+            "22": [
+                "process 1 ends",
+                "processes: [2|p=2|r=22|d=33]",
+                "process 2 starts"
+            ],
+            "24": [
+                "process 2 ends"
+            ],
+            "26": [
+                "processes: [3|p=3|r=26|d=39]",
+                "process 3 starts"
+            ],
+            "28": [
+                "processes: [1|p=1|r=28|d=35] [3|p=1|r=26|d=39]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "29": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "30": [
+                "process 3 ends"
+            ],
+            "33": [
+                "processes: [2|p=2|r=33|d=44]",
+                "process 2 starts"
+            ],
+            "35": [
+                "process 2 ends",
+                "processes: [1|p=1|r=35|d=42]",
+                "process 1 starts"
+            ],
+            "36": [
+                "process 1 ends"
+            ],
+            "39": [
+                "processes: [3|p=3|r=39|d=52]",
+                "process 3 starts"
+            ],
+            "42": [
+                "process 3 ends",
+                "processes: [1|p=1|r=42|d=49]",
+                "process 1 starts"
+            ],
+            "43": [
+                "process 1 ends"
+            ],
+            "44": [
+                "processes: [2|p=2|r=44|d=55]",
+                "process 2 starts"
+            ],
+            "46": [
+                "process 2 ends"
+            ],
+            "49": [
+                "processes: [1|p=1|r=49|d=56]",
+                "process 1 starts"
+            ],
+            "50": [
+                "process 1 ends"
+            ],
+            "52": [
+                "processes: [3|p=3|r=52|d=65]",
+                "process 3 starts"
+            ],
+            "55": [
+                "process 3 ends",
+                "processes: [2|p=2|r=55|d=66]",
+                "process 2 starts"
+            ],
+            "56": [
+                "processes: [1|p=1|r=56|d=63] [2|p=1|r=55|d=66]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "57": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "58": [
+                "process 2 ends"
+            ],
+            "63": [
+                "processes: [1|p=1|r=63|d=70]",
+                "process 1 starts"
+            ],
+            "64": [
+                "process 1 ends"
+            ],
+            "65": [
+                "processes: [3|p=3|r=65|d=78]",
+                "process 3 starts"
+            ],
+            "66": [
+                "processes: [2|p=2|r=66|d=77] [3|p=2|r=65|d=78]",
+                "process 3 preempted!",
+                "process 2 starts"
+            ],
+            "68": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "70": [
+                "process 3 ends",
+                "processes: [1|p=1|r=70|d=77]",
+                "process 1 starts"
+            ],
+            "71": [
+                "process 1 ends"
+            ],
+            "77": [
+                "processes: [1|p=1|r=77|d=84] [2|p=2|r=77|d=88]",
+                "process 1 starts"
+            ],
+            "78": [
+                "process 1 ends",
+                "processes: [2|p=2|r=77|d=88] [3|p=3|r=78|d=91]",
+                "process 2 starts"
+            ],
+            "80": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "83": [
+                "process 3 ends"
+            ],
+            "84": [
+                "processes: [1|p=1|r=84|d=91]",
+                "process 1 starts"
+            ],
+            "85": [
+                "process 1 ends"
+            ],
+            "88": [
+                "processes: [2|p=2|r=88|d=99]",
+                "process 2 starts"
+            ],
+            "90": [
+                "process 2 ends"
+            ],
+            "91": [
+                "processes: [1|p=1|r=91|d=98] [3|p=3|r=91|d=104]",
+                "process 1 starts"
+            ],
+            "92": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "95": [
+                "process 3 ends"
+            ],
+            "98": [
+                "processes: [1|p=1|r=98|d=105]",
+                "process 1 starts"
+            ],
+            "99": [
+                "process 1 ends",
+                "processes: [2|p=2|r=99|d=110]",
+                "process 2 starts"
+            ],
+            "101": [
+                "process 2 ends"
+            ],
+            "104": [
+                "processes: [3|p=3|r=104|d=117]",
+                "process 3 starts"
+            ],
+            "105": [
+                "processes: [1|p=1|r=105|d=112] [3|p=2|r=104|d=117]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "106": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "108": [
+                "process 3 ends"
+            ],
+            "110": [
+                "processes: [2|p=2|r=110|d=121]",
+                "process 2 starts"
+            ],
+            "112": [
+                "process 2 ends",
+                "processes: [1|p=1|r=112|d=119]",
+                "process 1 starts"
+            ],
+            "113": [
+                "process 1 ends"
+            ],
+            "117": [
+                "processes: [3|p=3|r=117|d=130]",
+                "process 3 starts"
+            ],
+            "119": [
+                "processes: [1|p=1|r=119|d=126] [3|p=1|r=117|d=130]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "120": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "121": [
+                "process 3 ends",
+                "processes: [2|p=2|r=121|d=132]",
+                "process 2 starts"
+            ],
+            "123": [
+                "process 2 ends"
+            ],
+            "126": [
+                "processes: [1|p=1|r=126|d=133]",
+                "process 1 starts"
+            ],
+            "127": [
+                "process 1 ends"
+            ],
+            "130": [
+                "processes: [3|p=3|r=130|d=143]",
+                "process 3 starts"
+            ],
+            "132": [
+                "processes: [3|p=1|r=130|d=143] [2|p=2|r=132|d=143]"
+            ],
+            "133": [
+                "process 3 ends",
+                "processes: [1|p=1|r=133|d=140] [2|p=2|r=132|d=143]",
+                "process 1 starts"
+            ],
+            "134": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "136": [
+                "process 2 ends"
+            ],
+            "140": [
+                "processes: [1|p=1|r=140|d=147]",
+                "process 1 starts"
+            ],
+            "141": [
+                "process 1 ends"
+            ],
+            "143": [
+                "processes: [2|p=2|r=143|d=154] [3|p=3|r=143|d=156]",
+                "process 2 starts"
+            ],
+            "145": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "147": [
+                "processes: [1|p=1|r=147|d=154] [3|p=1|r=143|d=156]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "148": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "149": [
+                "process 3 ends"
+            ],
+            "154": [
+                "processes: [1|p=1|r=154|d=161] [2|p=2|r=154|d=165]",
+                "process 1 starts"
+            ],
+            "155": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "156": [
+                "processes: [2|p=1|r=154|d=165] [3|p=3|r=156|d=169]"
+            ],
+            "157": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "160": [
+                "process 3 ends"
+            ],
+            "161": [
+                "processes: [1|p=1|r=161|d=168]",
+                "process 1 starts"
+            ],
+            "162": [
+                "process 1 ends"
+            ],
+            "165": [
+                "processes: [2|p=2|r=165|d=176]",
+                "process 2 starts"
+            ],
+            "167": [
+                "process 2 ends"
+            ],
+            "168": [
+                "processes: [1|p=1|r=168|d=175]",
+                "process 1 starts"
+            ],
+            "169": [
+                "process 1 ends",
+                "processes: [3|p=3|r=169|d=182]",
+                "process 3 starts"
+            ],
+            "172": [
+                "process 3 ends"
+            ],
+            "175": [
+                "processes: [1|p=1|r=175|d=182]",
+                "process 1 starts"
+            ],
+            "176": [
+                "process 1 ends",
+                "processes: [2|p=2|r=176|d=187]",
+                "process 2 starts"
+            ],
+            "178": [
+                "process 2 ends"
+            ],
+            "182": [
+                "processes: [1|p=1|r=182|d=189] [3|p=3|r=182|d=195]",
+                "process 1 starts"
+            ],
+            "183": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "186": [
+                "process 3 ends"
+            ],
+            "187": [
+                "processes: [2|p=2|r=187|d=198]",
+                "process 2 starts"
+            ],
+            "189": [
+                "process 2 ends",
+                "processes: [1|p=1|r=189|d=196]",
+                "process 1 starts"
+            ],
+            "190": [
+                "process 1 ends"
+            ],
+            "195": [
+                "processes: [3|p=3|r=195|d=208]",
+                "process 3 starts"
+            ],
+            "196": [
+                "processes: [1|p=1|r=196|d=203] [3|p=2|r=195|d=208]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "197": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "198": [
+                "processes: [3|p=1|r=195|d=208] [2|p=2|r=198|d=209]"
+            ],
+            "199": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "201": [
+                "process 2 ends"
+            ],
+            "203": [
+                "processes: [1|p=1|r=203|d=210]",
+                "process 1 starts"
+            ],
+            "204": [
+                "process 1 ends"
+            ],
+            "208": [
+                "processes: [3|p=3|r=208|d=221]",
+                "process 3 starts"
+            ],
+            "209": [
+                "processes: [2|p=2|r=209|d=220] [3|p=2|r=208|d=221]",
+                "process 3 preempted!",
+                "process 2 starts"
+            ],
+            "210": [
+                "processes: [1|p=1|r=210|d=217] [2|p=1|r=209|d=220] [3|p=2|r=208|d=221]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "211": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "212": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "214": [
+                "process 3 ends"
+            ],
+            "217": [
+                "processes: [1|p=1|r=217|d=224]",
+                "process 1 starts"
+            ],
+            "218": [
+                "process 1 ends"
+            ],
+            "220": [
+                "processes: [2|p=2|r=220|d=231]",
+                "process 2 starts"
+            ],
+            "221": [
+                "processes: [2|p=1|r=220|d=231] [3|p=3|r=221|d=234]"
+            ],
+            "222": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "224": [
+                "processes: [1|p=1|r=224|d=231] [3|p=1|r=221|d=234]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "225": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "226": [
+                "process 3 ends"
+            ],
+            "231": [
+                "processes: [1|p=1|r=231|d=238] [2|p=2|r=231|d=242]",
+                "process 1 starts"
+            ],
+            "232": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "234": [
+                "process 2 ends",
+                "processes: [3|p=3|r=234|d=247]",
+                "process 3 starts"
+            ],
+            "237": [
+                "process 3 ends"
+            ],
+            "238": [
+                "processes: [1|p=1|r=238|d=245]",
+                "process 1 starts"
+            ],
+            "239": [
+                "process 1 ends"
+            ],
+            "242": [
+                "processes: [2|p=2|r=242|d=253]",
+                "process 2 starts"
+            ],
+            "244": [
+                "process 2 ends"
+            ],
+            "245": [
+                "processes: [1|p=1|r=245|d=252]",
+                "process 1 starts"
+            ],
+            "246": [
+                "process 1 ends"
+            ],
+            "247": [
+                "processes: [3|p=3|r=247|d=260]",
+                "process 3 starts"
+            ],
+            "250": [
+                "process 3 ends"
+            ],
+            "252": [
+                "processes: [1|p=1|r=252|d=259]",
+                "process 1 starts"
+            ],
+            "253": [
+                "process 1 ends",
+                "processes: [2|p=2|r=253|d=264]",
+                "process 2 starts"
+            ],
+            "255": [
+                "process 2 ends"
+            ],
+            "259": [
+                "processes: [1|p=1|r=259|d=266]",
+                "process 1 starts"
+            ],
+            "260": [
+                "process 1 ends",
+                "processes: [3|p=3|r=260|d=273]",
+                "process 3 starts"
+            ],
+            "263": [
+                "process 3 ends"
+            ],
+            "264": [
+                "processes: [2|p=2|r=264|d=275]",
+                "process 2 starts"
+            ],
+            "266": [
+                "process 2 ends",
+                "processes: [1|p=1|r=266|d=273]",
+                "process 1 starts"
+            ],
+            "267": [
+                "process 1 ends"
+            ],
+            "273": [
+                "processes: [1|p=1|r=273|d=280] [3|p=3|r=273|d=286]",
+                "process 1 starts"
+            ],
+            "274": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "275": [
+                "processes: [3|p=2|r=273|d=286] [2|p=2|r=275|d=286]"
+            ],
+            "277": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "279": [
+                "process 2 ends"
+            ],
+            "280": [
+                "processes: [1|p=1|r=280|d=287]",
+                "process 1 starts"
+            ],
+            "281": [
+                "process 1 ends"
+            ],
+            "286": [
+                "processes: [2|p=2|r=286|d=297] [3|p=3|r=286|d=299]",
+                "process 2 starts"
+            ],
+            "287": [
+                "processes: [1|p=1|r=287|d=294] [2|p=1|r=286|d=297] [3|p=3|r=286|d=299]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "288": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "289": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "292": [
+                "process 3 ends"
+            ],
+            "294": [
+                "processes: [1|p=1|r=294|d=301]",
+                "process 1 starts"
+            ],
+            "295": [
+                "process 1 ends"
+            ],
+            "297": [
+                "processes: [2|p=2|r=297|d=308]",
+                "process 2 starts"
+            ],
+            "299": [
+                "process 2 ends",
+                "processes: [3|p=3|r=299|d=312]",
+                "process 3 starts"
+            ],
+            "301": [
+                "processes: [1|p=1|r=301|d=308] [3|p=1|r=299|d=312]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "302": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "303": [
+                "process 3 ends"
+            ],
+            "308": [
+                "processes: [1|p=1|r=308|d=315] [2|p=2|r=308|d=319]",
+                "process 1 starts"
+            ],
+            "309": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "311": [
+                "process 2 ends"
+            ],
+            "312": [
+                "processes: [3|p=3|r=312|d=325]",
+                "process 3 starts"
+            ],
+            "315": [
+                "process 3 ends",
+                "processes: [1|p=1|r=315|d=322]",
+                "process 1 starts"
+            ],
+            "316": [
+                "process 1 ends"
+            ],
+            "319": [
+                "processes: [2|p=2|r=319|d=330]",
+                "process 2 starts"
+            ],
+            "321": [
+                "process 2 ends"
+            ],
+            "322": [
+                "processes: [1|p=1|r=322|d=329]",
+                "process 1 starts"
+            ],
+            "323": [
+                "process 1 ends"
+            ],
+            "325": [
+                "processes: [3|p=3|r=325|d=338]",
+                "process 3 starts"
+            ],
+            "328": [
+                "process 3 ends"
+            ],
+            "329": [
+                "processes: [1|p=1|r=329|d=336]",
+                "process 1 starts"
+            ],
+            "330": [
+                "process 1 ends",
+                "processes: [2|p=2|r=330|d=341]",
+                "process 2 starts"
+            ],
+            "332": [
+                "process 2 ends"
+            ],
+            "336": [
+                "processes: [1|p=1|r=336|d=343]",
+                "process 1 starts"
+            ],
+            "337": [
+                "process 1 ends"
+            ],
+            "338": [
+                "processes: [3|p=3|r=338|d=351]",
+                "process 3 starts"
+            ],
+            "341": [
+                "process 3 ends",
+                "processes: [2|p=2|r=341|d=352]",
+                "process 2 starts"
+            ],
+            "343": [
+                "process 2 ends",
+                "processes: [1|p=1|r=343|d=350]",
+                "process 1 starts"
+            ],
+            "344": [
+                "process 1 ends"
+            ],
+            "350": [
+                "processes: [1|p=1|r=350|d=357]",
+                "process 1 starts"
+            ],
+            "351": [
+                "process 1 ends",
+                "processes: [3|p=3|r=351|d=364]",
+                "process 3 starts"
+            ],
+            "352": [
+                "processes: [2|p=2|r=352|d=363] [3|p=2|r=351|d=364]",
+                "process 3 preempted!",
+                "process 2 starts"
+            ],
+            "354": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "356": [
+                "process 3 ends"
+            ],
+            "357": [
+                "processes: [1|p=1|r=357|d=364]",
+                "process 1 starts"
+            ],
+            "358": [
+                "process 1 ends"
+            ],
+            "363": [
+                "processes: [2|p=2|r=363|d=374]",
+                "process 2 starts"
+            ],
+            "364": [
+                "processes: [1|p=1|r=364|d=371] [2|p=1|r=363|d=374] [3|p=3|r=364|d=377]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "365": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "366": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "369": [
+                "process 3 ends"
+            ],
+            "371": [
+                "processes: [1|p=1|r=371|d=378]",
+                "process 1 starts"
+            ],
+            "372": [
+                "process 1 ends"
+            ],
+            "374": [
+                "processes: [2|p=2|r=374|d=385]",
+                "process 2 starts"
+            ],
+            "376": [
+                "process 2 ends"
+            ],
+            "377": [
+                "processes: [3|p=3|r=377|d=390]",
+                "process 3 starts"
+            ],
+            "378": [
+                "processes: [1|p=1|r=378|d=385] [3|p=2|r=377|d=390]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "379": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "381": [
+                "process 3 ends"
+            ],
+            "385": [
+                "processes: [1|p=1|r=385|d=392] [2|p=2|r=385|d=396]",
+                "process 1 starts"
+            ],
+            "386": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "388": [
+                "process 2 ends"
+            ],
+            "390": [
+                "processes: [3|p=3|r=390|d=403]",
+                "process 3 starts"
+            ],
+            "392": [
+                "processes: [1|p=1|r=392|d=399] [3|p=1|r=390|d=403]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "393": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "394": [
+                "process 3 ends"
+            ],
+            "396": [
+                "processes: [2|p=2|r=396|d=407]",
+                "process 2 starts"
+            ],
+            "398": [
+                "process 2 ends"
+            ],
+            "399": [
+                "processes: [1|p=1|r=399|d=406]",
+                "process 1 starts"
+            ],
+            "400": [
+                "process 1 ends"
+            ],
+            "403": [
+                "processes: [3|p=3|r=403|d=416]",
+                "process 3 starts"
+            ],
+            "406": [
+                "process 3 ends",
+                "processes: [1|p=1|r=406|d=413]",
+                "process 1 starts"
+            ],
+            "407": [
+                "process 1 ends",
+                "processes: [2|p=2|r=407|d=418]",
+                "process 2 starts"
+            ],
+            "409": [
+                "process 2 ends"
+            ],
+            "413": [
+                "processes: [1|p=1|r=413|d=420]",
+                "process 1 starts"
+            ],
+            "414": [
+                "process 1 ends"
+            ],
+            "416": [
+                "processes: [3|p=3|r=416|d=429]",
+                "process 3 starts"
+            ],
+            "418": [
+                "processes: [3|p=1|r=416|d=429] [2|p=2|r=418|d=429]"
+            ],
+            "419": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "420": [
+                "processes: [1|p=1|r=420|d=427] [2|p=1|r=418|d=429]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "421": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "422": [
+                "process 2 ends"
+            ],
+            "427": [
+                "processes: [1|p=1|r=427|d=434]",
+                "process 1 starts"
+            ],
+            "428": [
+                "process 1 ends"
+            ],
+            "429": [
+                "processes: [2|p=2|r=429|d=440] [3|p=3|r=429|d=442]",
+                "process 2 starts"
+            ],
+            "431": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "434": [
+                "process 3 ends",
+                "processes: [1|p=1|r=434|d=441]",
+                "process 1 starts"
+            ],
+            "435": [
+                "process 1 ends"
+            ],
+            "440": [
+                "processes: [2|p=2|r=440|d=451]",
+                "process 2 starts"
+            ],
+            "441": [
+                "processes: [1|p=1|r=441|d=448] [2|p=1|r=440|d=451]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "442": [
+                "process 1 ends",
+                "processes: [2|p=1|r=440|d=451] [3|p=3|r=442|d=455]",
+                "process 2 starts"
+            ],
+            "443": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "446": [
+                "process 3 ends"
+            ],
+            "448": [
+                "processes: [1|p=1|r=448|d=455]",
+                "process 1 starts"
+            ],
+            "449": [
+                "process 1 ends"
+            ],
+            "451": [
+                "processes: [2|p=2|r=451|d=462]",
+                "process 2 starts"
+            ],
+            "453": [
+                "process 2 ends"
+            ],
+            "455": [
+                "processes: [1|p=1|r=455|d=462] [3|p=3|r=455|d=468]",
+                "process 1 starts"
+            ],
+            "456": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "459": [
+                "process 3 ends"
+            ],
+            "462": [
+                "processes: [1|p=1|r=462|d=469] [2|p=2|r=462|d=473]",
+                "process 1 starts"
+            ],
+            "463": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "465": [
+                "process 2 ends"
+            ],
+            "468": [
+                "processes: [3|p=3|r=468|d=481]",
+                "process 3 starts"
+            ],
+            "469": [
+                "processes: [1|p=1|r=469|d=476] [3|p=2|r=468|d=481]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "470": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "472": [
+                "process 3 ends"
+            ],
+            "473": [
+                "processes: [2|p=2|r=473|d=484]",
+                "process 2 starts"
+            ],
+            "475": [
+                "process 2 ends"
+            ],
+            "476": [
+                "processes: [1|p=1|r=476|d=483]",
+                "process 1 starts"
+            ],
+            "477": [
+                "process 1 ends"
+            ],
+            "481": [
+                "processes: [3|p=3|r=481|d=494]",
+                "process 3 starts"
+            ],
+            "483": [
+                "processes: [1|p=1|r=483|d=490] [3|p=1|r=481|d=494]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "484": [
+                "process 1 ends",
+                "processes: [3|p=1|r=481|d=494] [2|p=2|r=484|d=495]",
+                "process 3 starts"
+            ],
+            "485": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "487": [
+                "process 2 ends"
+            ],
+            "490": [
+                "processes: [1|p=1|r=490|d=497]",
+                "process 1 starts"
+            ],
+            "491": [
+                "process 1 ends"
+            ],
+            "494": [
+                "processes: [3|p=3|r=494|d=507]",
+                "process 3 starts"
+            ],
+            "495": [
+                "processes: [2|p=2|r=495|d=506] [3|p=2|r=494|d=507]",
+                "process 3 preempted!",
+                "process 2 starts"
+            ],
+            "497": [
+                "process 2 ends",
+                "processes: [1|p=1|r=497|d=504] [3|p=2|r=494|d=507]",
+                "process 1 starts"
+            ],
+            "498": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "500": [
+                "process 3 ends"
+            ],
+            "504": [
+                "processes: [1|p=1|r=504|d=511]",
+                "process 1 starts"
+            ],
+            "505": [
+                "process 1 ends"
+            ],
+            "506": [
+                "processes: [2|p=2|r=506|d=517]",
+                "process 2 starts"
+            ],
+            "507": [
+                "processes: [2|p=1|r=506|d=517] [3|p=3|r=507|d=520]"
+            ],
+            "508": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "511": [
+                "process 3 ends",
+                "processes: [1|p=1|r=511|d=518]",
+                "process 1 starts"
+            ],
+            "512": [
+                "process 1 ends"
+            ],
+            "517": [
+                "processes: [2|p=2|r=517|d=528]",
+                "process 2 starts"
+            ],
+            "518": [
+                "processes: [1|p=1|r=518|d=525] [2|p=1|r=517|d=528]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "519": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "520": [
+                "process 2 ends",
+                "processes: [3|p=3|r=520|d=533]",
+                "process 3 starts"
+            ],
+            "523": [
+                "process 3 ends"
+            ],
+            "525": [
+                "processes: [1|p=1|r=525|d=532]",
+                "process 1 starts"
+            ],
+            "526": [
+                "process 1 ends"
+            ],
+            "528": [
+                "processes: [2|p=2|r=528|d=539]",
+                "process 2 starts"
+            ],
+            "530": [
+                "process 2 ends"
+            ],
+            "532": [
+                "processes: [1|p=1|r=532|d=539]",
+                "process 1 starts"
+            ],
+            "533": [
+                "process 1 ends",
+                "processes: [3|p=3|r=533|d=546]",
+                "process 3 starts"
+            ],
+            "536": [
+                "process 3 ends"
+            ],
+            "539": [
+                "processes: [1|p=1|r=539|d=546] [2|p=2|r=539|d=550]",
+                "process 1 starts"
+            ],
+            "540": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "542": [
+                "process 2 ends"
+            ],
+            "546": [
+                "processes: [1|p=1|r=546|d=553] [3|p=3|r=546|d=559]",
+                "process 1 starts"
+            ],
+            "547": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "550": [
+                "process 3 ends",
+                "processes: [2|p=2|r=550|d=561]",
+                "process 2 starts"
+            ],
+            "552": [
+                "process 2 ends"
+            ],
+            "553": [
+                "processes: [1|p=1|r=553|d=560]",
+                "process 1 starts"
+            ],
+            "554": [
+                "process 1 ends"
+            ],
+            "559": [
+                "processes: [3|p=3|r=559|d=572]",
+                "process 3 starts"
+            ],
+            "560": [
+                "processes: [1|p=1|r=560|d=567] [3|p=2|r=559|d=572]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "561": [
+                "process 1 ends",
+                "processes: [3|p=2|r=559|d=572] [2|p=2|r=561|d=572]",
+                "process 3 starts"
+            ],
+            "563": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "565": [
+                "process 2 ends"
+            ],
+            "567": [
+                "processes: [1|p=1|r=567|d=574]",
+                "process 1 starts"
+            ],
+            "568": [
+                "process 1 ends"
+            ],
+            "572": [
+                "processes: [2|p=2|r=572|d=583] [3|p=3|r=572|d=585]",
+                "process 2 starts"
+            ],
+            "574": [
+                "process 2 ends",
+                "processes: [1|p=1|r=574|d=581] [3|p=3|r=572|d=585]",
+                "process 1 starts"
+            ],
+            "575": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "578": [
+                "process 3 ends"
+            ],
+            "581": [
+                "processes: [1|p=1|r=581|d=588]",
+                "process 1 starts"
+            ],
+            "582": [
+                "process 1 ends"
+            ],
+            "583": [
+                "processes: [2|p=2|r=583|d=594]",
+                "process 2 starts"
+            ],
+            "585": [
+                "process 2 ends",
+                "processes: [3|p=3|r=585|d=598]",
+                "process 3 starts"
+            ],
+            "588": [
+                "process 3 ends",
+                "processes: [1|p=1|r=588|d=595]",
+                "process 1 starts"
+            ],
+            "589": [
+                "process 1 ends"
+            ],
+            "594": [
+                "processes: [2|p=2|r=594|d=605]",
+                "process 2 starts"
+            ],
+            "595": [
+                "processes: [1|p=1|r=595|d=602] [2|p=1|r=594|d=605]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "596": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "597": [
+                "process 2 ends"
+            ],
+            "598": [
+                "processes: [3|p=3|r=598|d=611]",
+                "process 3 starts"
+            ],
+            "601": [
+                "process 3 ends"
+            ],
+            "602": [
+                "processes: [1|p=1|r=602|d=609]",
+                "process 1 starts"
+            ],
+            "603": [
+                "process 1 ends"
+            ],
+            "605": [
+                "processes: [2|p=2|r=605|d=616]",
+                "process 2 starts"
+            ],
+            "607": [
+                "process 2 ends"
+            ],
+            "609": [
+                "processes: [1|p=1|r=609|d=616]",
+                "process 1 starts"
+            ],
+            "610": [
+                "process 1 ends"
+            ],
+            "611": [
+                "processes: [3|p=3|r=611|d=624]",
+                "process 3 starts"
+            ],
+            "614": [
+                "process 3 ends"
+            ],
+            "616": [
+                "processes: [1|p=1|r=616|d=623] [2|p=2|r=616|d=627]",
+                "process 1 starts"
+            ],
+            "617": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "619": [
+                "process 2 ends"
+            ],
+            "623": [
+                "processes: [1|p=1|r=623|d=630]",
+                "process 1 starts"
+            ],
+            "624": [
+                "process 1 ends",
+                "processes: [3|p=3|r=624|d=637]",
+                "process 3 starts"
+            ],
+            "627": [
+                "process 3 ends",
+                "processes: [2|p=2|r=627|d=638]",
+                "process 2 starts"
+            ],
+            "629": [
+                "process 2 ends"
+            ],
+            "630": [
+                "processes: [1|p=1|r=630|d=637]",
+                "process 1 starts"
+            ],
+            "631": [
+                "process 1 ends"
+            ],
+            "637": [
+                "processes: [1|p=1|r=637|d=644] [3|p=3|r=637|d=650]",
+                "process 1 starts"
+            ],
+            "638": [
+                "process 1 ends",
+                "processes: [2|p=2|r=638|d=649] [3|p=3|r=637|d=650]",
+                "process 2 starts"
+            ],
+            "640": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "643": [
+                "process 3 ends"
+            ],
+            "644": [
+                "processes: [1|p=1|r=644|d=651]",
+                "process 1 starts"
+            ],
+            "645": [
+                "process 1 ends"
+            ],
+            "649": [
+                "processes: [2|p=2|r=649|d=660]",
+                "process 2 starts"
+            ],
+            "650": [
+                "processes: [2|p=1|r=649|d=660] [3|p=3|r=650|d=663]"
+            ],
+            "651": [
+                "process 2 ends",
+                "processes: [1|p=1|r=651|d=658] [3|p=3|r=650|d=663]",
+                "process 1 starts"
+            ],
+            "652": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "655": [
+                "process 3 ends"
+            ],
+            "658": [
+                "processes: [1|p=1|r=658|d=665]",
+                "process 1 starts"
+            ],
+            "659": [
+                "process 1 ends"
+            ],
+            "660": [
+                "processes: [2|p=2|r=660|d=671]",
+                "process 2 starts"
+            ],
+            "662": [
+                "process 2 ends"
+            ],
+            "663": [
+                "processes: [3|p=3|r=663|d=676]",
+                "process 3 starts"
+            ],
+            "665": [
+                "processes: [1|p=1|r=665|d=672] [3|p=1|r=663|d=676]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "666": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "667": [
+                "process 3 ends"
+            ],
+            "671": [
+                "processes: [2|p=2|r=671|d=682]",
+                "process 2 starts"
+            ],
+            "672": [
+                "processes: [1|p=1|r=672|d=679] [2|p=1|r=671|d=682]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "673": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "674": [
+                "process 2 ends"
+            ],
+            "676": [
+                "processes: [3|p=3|r=676|d=689]",
+                "process 3 starts"
+            ],
+            "679": [
+                "process 3 ends",
+                "processes: [1|p=1|r=679|d=686]",
+                "process 1 starts"
+            ],
+            "680": [
+                "process 1 ends"
+            ],
+            "682": [
+                "processes: [2|p=2|r=682|d=693]",
+                "process 2 starts"
+            ],
+            "684": [
+                "process 2 ends"
+            ],
+            "686": [
+                "processes: [1|p=1|r=686|d=693]",
+                "process 1 starts"
+            ],
+            "687": [
+                "process 1 ends"
+            ],
+            "689": [
+                "processes: [3|p=3|r=689|d=702]",
+                "process 3 starts"
+            ],
+            "692": [
+                "process 3 ends"
+            ],
+            "693": [
+                "processes: [1|p=1|r=693|d=700] [2|p=2|r=693|d=704]",
+                "process 1 starts"
+            ],
+            "694": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "696": [
+                "process 2 ends"
+            ],
+            "700": [
+                "processes: [1|p=1|r=700|d=707]",
+                "process 1 starts"
+            ],
+            "701": [
+                "process 1 ends"
+            ],
+            "702": [
+                "processes: [3|p=3|r=702|d=715]",
+                "process 3 starts"
+            ],
+            "704": [
+                "processes: [3|p=1|r=702|d=715] [2|p=2|r=704|d=715]"
+            ],
+            "705": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "707": [
+                "process 2 ends",
+                "processes: [1|p=1|r=707|d=714]",
+                "process 1 starts"
+            ],
+            "708": [
+                "process 1 ends"
+            ],
+            "714": [
+                "processes: [1|p=1|r=714|d=721]",
+                "process 1 starts"
+            ],
+            "715": [
+                "process 1 ends",
+                "processes: [2|p=2|r=715|d=726] [3|p=3|r=715|d=728]",
+                "process 2 starts"
+            ],
+            "717": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "720": [
+                "process 3 ends"
+            ],
+            "721": [
+                "processes: [1|p=1|r=721|d=728]",
+                "process 1 starts"
+            ],
+            "722": [
+                "process 1 ends"
+            ],
+            "726": [
+                "processes: [2|p=2|r=726|d=737]",
+                "process 2 starts"
+            ],
+            "728": [
+                "process 2 ends",
+                "processes: [1|p=1|r=728|d=735] [3|p=3|r=728|d=741]",
+                "process 1 starts"
+            ],
+            "729": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "732": [
+                "process 3 ends"
+            ],
+            "735": [
+                "processes: [1|p=1|r=735|d=742]",
+                "process 1 starts"
+            ],
+            "736": [
+                "process 1 ends"
+            ],
+            "737": [
+                "processes: [2|p=2|r=737|d=748]",
+                "process 2 starts"
+            ],
+            "739": [
+                "process 2 ends"
+            ],
+            "741": [
+                "processes: [3|p=3|r=741|d=754]",
+                "process 3 starts"
+            ],
+            "742": [
+                "processes: [1|p=1|r=742|d=749] [3|p=2|r=741|d=754]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "743": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "745": [
+                "process 3 ends"
+            ],
+            "748": [
+                "processes: [2|p=2|r=748|d=759]",
+                "process 2 starts"
+            ],
+            "749": [
+                "processes: [1|p=1|r=749|d=756] [2|p=1|r=748|d=759]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "750": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "751": [
+                "process 2 ends"
+            ],
+            "754": [
+                "processes: [3|p=3|r=754|d=767]",
+                "process 3 starts"
+            ],
+            "756": [
+                "processes: [1|p=1|r=756|d=763] [3|p=1|r=754|d=767]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "757": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "758": [
+                "process 3 ends"
+            ],
+            "759": [
+                "processes: [2|p=2|r=759|d=770]",
+                "process 2 starts"
+            ],
+            "761": [
+                "process 2 ends"
+            ],
+            "763": [
+                "processes: [1|p=1|r=763|d=770]",
+                "process 1 starts"
+            ],
+            "764": [
+                "process 1 ends"
+            ],
+            "767": [
+                "processes: [3|p=3|r=767|d=780]",
+                "process 3 starts"
+            ],
+            "770": [
+                "process 3 ends",
+                "processes: [1|p=1|r=770|d=777] [2|p=2|r=770|d=781]",
+                "process 1 starts"
+            ],
+            "771": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "773": [
+                "process 2 ends"
+            ],
+            "777": [
+                "processes: [1|p=1|r=777|d=784]",
+                "process 1 starts"
+            ],
+            "778": [
+                "process 1 ends"
+            ],
+            "780": [
+                "processes: [3|p=3|r=780|d=793]",
+                "process 3 starts"
+            ],
+            "781": [
+                "processes: [2|p=2|r=781|d=792] [3|p=2|r=780|d=793]",
+                "process 3 preempted!",
+                "process 2 starts"
+            ],
+            "783": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "784": [
+                "processes: [1|p=1|r=784|d=791] [3|p=1|r=780|d=793]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "785": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "786": [
+                "process 3 ends"
+            ],
+            "791": [
+                "processes: [1|p=1|r=791|d=798]",
+                "process 1 starts"
+            ],
+            "792": [
+                "process 1 ends",
+                "processes: [2|p=2|r=792|d=803]",
+                "process 2 starts"
+            ],
+            "793": [
+                "processes: [2|p=1|r=792|d=803] [3|p=3|r=793|d=806]"
+            ],
+            "794": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "797": [
+                "process 3 ends"
+            ],
+            "798": [
+                "processes: [1|p=1|r=798|d=805]",
+                "process 1 starts"
+            ],
+            "799": [
+                "process 1 ends"
+            ],
+            "803": [
+                "processes: [2|p=2|r=803|d=814]",
+                "process 2 starts"
+            ],
+            "805": [
+                "process 2 ends",
+                "processes: [1|p=1|r=805|d=812]",
+                "process 1 starts"
+            ],
+            "806": [
+                "process 1 ends",
+                "processes: [3|p=3|r=806|d=819]",
+                "process 3 starts"
+            ],
+            "809": [
+                "process 3 ends"
+            ],
+            "812": [
+                "processes: [1|p=1|r=812|d=819]",
+                "process 1 starts"
+            ],
+            "813": [
+                "process 1 ends"
+            ],
+            "814": [
+                "processes: [2|p=2|r=814|d=825]",
+                "process 2 starts"
+            ],
+            "816": [
+                "process 2 ends"
+            ],
+            "819": [
+                "processes: [1|p=1|r=819|d=826] [3|p=3|r=819|d=832]",
+                "process 1 starts"
+            ],
+            "820": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "823": [
+                "process 3 ends"
+            ],
+            "825": [
+                "processes: [2|p=2|r=825|d=836]",
+                "process 2 starts"
+            ],
+            "826": [
+                "processes: [1|p=1|r=826|d=833] [2|p=1|r=825|d=836]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "827": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "828": [
+                "process 2 ends"
+            ],
+            "832": [
+                "processes: [3|p=3|r=832|d=845]",
+                "process 3 starts"
+            ],
+            "833": [
+                "processes: [1|p=1|r=833|d=840] [3|p=2|r=832|d=845]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "834": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "836": [
+                "process 3 ends",
+                "processes: [2|p=2|r=836|d=847]",
+                "process 2 starts"
+            ],
+            "838": [
+                "process 2 ends"
+            ],
+            "840": [
+                "processes: [1|p=1|r=840|d=847]",
+                "process 1 starts"
+            ],
+            "841": [
+                "process 1 ends"
+            ],
+            "845": [
+                "processes: [3|p=3|r=845|d=858]",
+                "process 3 starts"
+            ],
+            "847": [
+                "processes: [1|p=1|r=847|d=854] [3|p=1|r=845|d=858] [2|p=2|r=847|d=858]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "848": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "849": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "851": [
+                "process 2 ends"
+            ],
+            "854": [
+                "processes: [1|p=1|r=854|d=861]",
+                "process 1 starts"
+            ],
+            "855": [
+                "process 1 ends"
+            ],
+            "858": [
+                "processes: [2|p=2|r=858|d=869] [3|p=3|r=858|d=871]",
+                "process 2 starts"
+            ],
+            "860": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "861": [
+                "processes: [1|p=1|r=861|d=868] [3|p=2|r=858|d=871]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "862": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "864": [
+                "process 3 ends"
+            ],
+            "868": [
+                "processes: [1|p=1|r=868|d=875]",
+                "process 1 starts"
+            ],
+            "869": [
+                "process 1 ends",
+                "processes: [2|p=2|r=869|d=880]",
+                "process 2 starts"
+            ],
+            "871": [
+                "process 2 ends",
+                "processes: [3|p=3|r=871|d=884]",
+                "process 3 starts"
+            ],
+            "874": [
+                "process 3 ends"
+            ],
+            "875": [
+                "processes: [1|p=1|r=875|d=882]",
+                "process 1 starts"
+            ],
+            "876": [
+                "process 1 ends"
+            ],
+            "880": [
+                "processes: [2|p=2|r=880|d=891]",
+                "process 2 starts"
+            ],
+            "882": [
+                "process 2 ends",
+                "processes: [1|p=1|r=882|d=889]",
+                "process 1 starts"
+            ],
+            "883": [
+                "process 1 ends"
+            ],
+            "884": [
+                "processes: [3|p=3|r=884|d=897]",
+                "process 3 starts"
+            ],
+            "887": [
+                "process 3 ends"
+            ],
+            "889": [
+                "processes: [1|p=1|r=889|d=896]",
+                "process 1 starts"
+            ],
+            "890": [
+                "process 1 ends"
+            ],
+            "891": [
+                "processes: [2|p=2|r=891|d=902]",
+                "process 2 starts"
+            ],
+            "893": [
+                "process 2 ends"
+            ],
+            "896": [
+                "processes: [1|p=1|r=896|d=903]",
+                "process 1 starts"
+            ],
+            "897": [
+                "process 1 ends",
+                "processes: [3|p=3|r=897|d=910]",
+                "process 3 starts"
+            ],
+            "900": [
+                "process 3 ends"
+            ],
+            "902": [
+                "processes: [2|p=2|r=902|d=913]",
+                "process 2 starts"
+            ],
+            "903": [
+                "processes: [1|p=1|r=903|d=910] [2|p=1|r=902|d=913]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "904": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "905": [
+                "process 2 ends"
+            ],
+            "910": [
+                "processes: [1|p=1|r=910|d=917] [3|p=3|r=910|d=923]",
+                "process 1 starts"
+            ],
+            "911": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "913": [
+                "processes: [3|p=1|r=910|d=923] [2|p=2|r=913|d=924]"
+            ],
+            "914": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "916": [
+                "process 2 ends"
+            ],
+            "917": [
+                "processes: [1|p=1|r=917|d=924]",
+                "process 1 starts"
+            ],
+            "918": [
+                "process 1 ends"
+            ],
+            "923": [
+                "processes: [3|p=3|r=923|d=936]",
+                "process 3 starts"
+            ],
+            "924": [
+                "processes: [1|p=1|r=924|d=931] [2|p=2|r=924|d=935] [3|p=2|r=923|d=936]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "925": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "927": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "929": [
+                "process 3 ends"
+            ],
+            "931": [
+                "processes: [1|p=1|r=931|d=938]",
+                "process 1 starts"
+            ],
+            "932": [
+                "process 1 ends"
+            ],
+            "935": [
+                "processes: [2|p=2|r=935|d=946]",
+                "process 2 starts"
+            ],
+            "936": [
+                "processes: [2|p=1|r=935|d=946] [3|p=3|r=936|d=949]"
+            ],
+            "937": [
+                "process 2 ends",
+                "process 3 starts"
+            ],
+            "938": [
+                "processes: [1|p=1|r=938|d=945] [3|p=2|r=936|d=949]",
+                "process 3 preempted!",
+                "process 1 starts"
+            ],
+            "939": [
+                "process 1 ends",
+                "process 3 starts"
+            ],
+            "941": [
+                "process 3 ends"
+            ],
+            "945": [
+                "processes: [1|p=1|r=945|d=952]",
+                "process 1 starts"
+            ],
+            "946": [
+                "process 1 ends",
+                "processes: [2|p=2|r=946|d=957]",
+                "process 2 starts"
+            ],
+            "948": [
+                "process 2 ends"
+            ],
+            "949": [
+                "processes: [3|p=3|r=949|d=962]",
+                "process 3 starts"
+            ],
+            "952": [
+                "process 3 ends",
+                "processes: [1|p=1|r=952|d=959]",
+                "process 1 starts"
+            ],
+            "953": [
+                "process 1 ends"
+            ],
+            "957": [
+                "processes: [2|p=2|r=957|d=968]",
+                "process 2 starts"
+            ],
+            "959": [
+                "process 2 ends",
+                "processes: [1|p=1|r=959|d=966]",
+                "process 1 starts"
+            ],
+            "960": [
+                "process 1 ends"
+            ],
+            "962": [
+                "processes: [3|p=3|r=962|d=975]",
+                "process 3 starts"
+            ],
+            "965": [
+                "process 3 ends"
+            ],
+            "966": [
+                "processes: [1|p=1|r=966|d=973]",
+                "process 1 starts"
+            ],
+            "967": [
+                "process 1 ends"
+            ],
+            "968": [
+                "processes: [2|p=2|r=968|d=979]",
+                "process 2 starts"
+            ],
+            "970": [
+                "process 2 ends"
+            ],
+            "973": [
+                "processes: [1|p=1|r=973|d=980]",
+                "process 1 starts"
+            ],
+            "974": [
+                "process 1 ends"
+            ],
+            "975": [
+                "processes: [3|p=3|r=975|d=988]",
+                "process 3 starts"
+            ],
+            "978": [
+                "process 3 ends"
+            ],
+            "979": [
+                "processes: [2|p=2|r=979|d=990]",
+                "process 2 starts"
+            ],
+            "980": [
+                "processes: [1|p=1|r=980|d=987] [2|p=1|r=979|d=990]",
+                "process 2 preempted!",
+                "process 1 starts"
+            ],
+            "981": [
+                "process 1 ends",
+                "process 2 starts"
+            ],
+            "982": [
+                "process 2 ends"
+            ],
+            "987": [
+                "processes: [1|p=1|r=987|d=994]",
+                "process 1 starts"
+            ],
+            "988": [
+                "process 1 ends",
+                "processes: [3|p=3|r=988|d=1001]",
+                "process 3 starts"
+            ],
+            "990": [
+                "processes: [3|p=1|r=988|d=1001] [2|p=2|r=990|d=1001]"
+            ],
+            "991": [
+                "process 3 ends",
+                "process 2 starts"
+            ],
+            "993": [
+                "process 2 ends"
+            ],
+            "994": [
+                "processes: [1|p=1|r=994|d=1001]",
+                "process 1 starts"
+            ],
+            "995": [
+                "process 1 ends"
+            ],
+            "1001": [
+                "max time reached",
+                "processes:"
+            ],
+            "Number of processes created": "311",
+            "Total waiting time": "115",
+            "Average waiting time": "0.37",
+            "Number of processes completed": "311",
+            "Maximum lateness": "0"
+        }
+    }
+]
